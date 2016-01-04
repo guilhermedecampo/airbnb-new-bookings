@@ -1,6 +1,7 @@
 package com.airbnb;
 
 import android.app.Activity;
+import com.magus.fblogin.FacebookLoginPackage;
 import android.os.Bundle;
 import android.view.KeyEvent;
 
@@ -26,6 +27,7 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
                 .setBundleAssetName("index.android.bundle")
                 .setJSMainModuleName("index.android")
                 .addPackage(new MainReactPackage())
+                .addPackage(new FacebookLoginPackage())
                 .setUseDeveloperSupport(BuildConfig.DEBUG)
                 .setInitialLifecycleState(LifecycleState.RESUMED)
                 .build();
